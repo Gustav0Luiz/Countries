@@ -1,11 +1,18 @@
 import { CountryCard } from "@/components/CountryCard";
 import { Country } from "@/types/Country";
+import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 
 type Props = {
     params:{
         name: string;
+    }
+}
+
+export const generateMetadata = ({params}: Props) => {
+    return {
+        title: `${decodeURI(params.name)}`,
     }
 }
 

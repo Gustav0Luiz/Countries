@@ -7,8 +7,10 @@ import Link from "next/link";
 const nunitoSans = Nunito_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Países",
-  description: "Uma lista de países feita com Next 14",
+  title: {
+    template: `País - %s`,
+    default: "Países",
+  }
 };
 
 export default function RootLayout({children,}: Readonly<{ children: React.ReactNode;}>){
