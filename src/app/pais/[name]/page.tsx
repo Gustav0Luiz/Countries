@@ -93,7 +93,7 @@ const CountryPage =  async ({params}: Props) => {
                 {borderCountries && <h3 className="mt-6 mb-6 sm:text-2xl text-xl font-semibold text-gray-800 text-center">Países que fazem fronteira:</h3>}
                 <div className="container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 w-full gap-2 ">
                     { borderCountries && borderCountries.map((border)=>( 
-                        <CountryCard {...border}/> 
+                        <CountryCard {...border} key={border.name}/> 
                     ))}
                 </div>
             </section>               
